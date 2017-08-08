@@ -23,8 +23,6 @@ Bar.draw = (chords, string, pattern, index) => {
     output += string + '|';
   }
 
-  chords = chords.map(chord => Chord.find(chord));
-
   let multiplier = 1;
   let currentChord = 0;
 

@@ -2,7 +2,7 @@
 <span>
     <span
         v-if="showChordNames"
-        v-for="(chord, index) in bar.chords"
+        v-for="(chord, index) in chordShapes"
         style="font-size:11px"
     >
         {{ index > 0 ? ' | ' : ''}}
@@ -29,7 +29,8 @@ export default {
     data() {
         return {
             Chord,
-            strings
+            strings,
+            chordShapes: []
         };
     },
     props: ['bar', 'index', 'showChordNames'],
@@ -45,8 +46,13 @@ export default {
         this.bar.pattern = Pattern.random();
       }
 
-      return Bar.draw(this.bar.chords, string, this.bar.pattern, this.index);
+      return Bar.draw(this.chordShapes, string, this.bar.pattern, this.index);
     }
+  },
+  created() {
+      this.bar.chords.forEach(chord => {
+        this.chordShapes.push(Chord.find(chord));
+      });
   }
 };
 </script>
