@@ -30043,7 +30043,7 @@ exports = module.exports = __webpack_require__(5)(undefined);
 
 
 // module
-exports.push([module.i, "\n.tab-line {\n  display: block;\n}\n", ""]);
+exports.push([module.i, "\n.tab-line {\r\n  display: block;\n}\r\n", ""]);
 
 // exports
 
@@ -30104,50 +30104,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
      * @returns {string}
      */
     draw: function draw(string) {
-      this.convertNamedtoShapes();
-
       if (this.bar.pattern.toLowerCase() === 'random') {
         this.bar.pattern = __WEBPACK_IMPORTED_MODULE_3__utils_pattern__["a" /* default */].random();
       }
 
       return __WEBPACK_IMPORTED_MODULE_2__utils_bar__["a" /* default */].draw(this.bar.chords, string, this.bar.pattern, this.index);
-    },
-
-    /**
-     * Convert any chords passed in by name into the approriate shape
-     * @returns {string}
-     */
-    convertNamedtoShapes: function convertNamedtoShapes() {
-      this.bar.chords = this.bar.chords.map(function (chord) {
-        var shapes = [];
-        var extensions = __WEBPACK_IMPORTED_MODULE_0_lodash___default()(__WEBPACK_IMPORTED_MODULE_1__constants__["c" /* supportedChords */]).sortBy(function (ext) {
-          return ext.length;
-        }).reverse().value();
-
-        __WEBPACK_IMPORTED_MODULE_0_lodash___default()(extensions).each(function (ext) {
-          // Prepend single character extensions with a space
-          // to protect against unwanted matches.
-          // eg 7 without the space would match against "x79997"
-          if (ext.length === 1) {
-            ext = ' ' + ext;
-          }
-
-          if (chord.toLowerCase().includes(ext)) {
-            shapes = __WEBPACK_IMPORTED_MODULE_4__utils_chord__["a" /* default */].findByName(chord);
-          };
-        });
-
-        if (shapes.length) {
-          var index = __WEBPACK_IMPORTED_MODULE_0_lodash___default.a.random(0, shapes.length - 1);
-          chord = shapes[index];
-        }
-
-        return chord;
-      });
     }
-  },
-  created: function created() {
-    this.convertNamedtoShapes();
   }
 });
 
@@ -30158,7 +30120,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pattern__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__note__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__constants__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__chord__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__constants__ = __webpack_require__(2);
+
 
 
 
@@ -30179,9 +30143,13 @@ Bar.draw = function (chords, string, pattern, index) {
   var note = '-';
   var output = '';
 
-  if (index % __WEBPACK_IMPORTED_MODULE_2__constants__["a" /* constants */].BEATS_PER_BAR === 0) {
+  if (index % __WEBPACK_IMPORTED_MODULE_3__constants__["a" /* constants */].BEATS_PER_BAR === 0) {
     output += string + '|';
   }
+
+  chords = chords.map(function (chord) {
+    return __WEBPACK_IMPORTED_MODULE_2__chord__["a" /* default */].find(chord);
+  });
 
   var multiplier = 1;
   var currentChord = 0;
@@ -30197,17 +30165,17 @@ Bar.draw = function (chords, string, pattern, index) {
     var chord = chords[currentChord];
 
     switch (string) {
-      case __WEBPACK_IMPORTED_MODULE_2__constants__["b" /* strings */].e:
+      case __WEBPACK_IMPORTED_MODULE_3__constants__["b" /* strings */].e:
         note = chord[5];break;
-      case __WEBPACK_IMPORTED_MODULE_2__constants__["b" /* strings */].B:
+      case __WEBPACK_IMPORTED_MODULE_3__constants__["b" /* strings */].B:
         note = chord[4];break;
-      case __WEBPACK_IMPORTED_MODULE_2__constants__["b" /* strings */].G:
+      case __WEBPACK_IMPORTED_MODULE_3__constants__["b" /* strings */].G:
         note = chord[3];break;
-      case __WEBPACK_IMPORTED_MODULE_2__constants__["b" /* strings */].D:
+      case __WEBPACK_IMPORTED_MODULE_3__constants__["b" /* strings */].D:
         note = chord[2];break;
-      case __WEBPACK_IMPORTED_MODULE_2__constants__["b" /* strings */].A:
+      case __WEBPACK_IMPORTED_MODULE_3__constants__["b" /* strings */].A:
         note = chord[1];break;
-      case __WEBPACK_IMPORTED_MODULE_2__constants__["b" /* strings */].E:
+      case __WEBPACK_IMPORTED_MODULE_3__constants__["b" /* strings */].E:
         note = chord[0];break;
     }
 
@@ -30407,7 +30375,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       staticStyle: {
         "font-size": "11px"
       }
-    }, [_vm._v("\n        " + _vm._s(index > 0 ? ' | ' : '') + "\n        " + _vm._s(!_vm.Chord.isNamed(chord) ? _vm.Chord.findByShape(chord) : chord) + "\n    ")]) : _vm._e()
+    }, [_vm._v("\r\n        " + _vm._s(index > 0 ? ' | ' : '') + "\r\n        " + _vm._s(!_vm.Chord.isNamed(chord) ? _vm.Chord.findByShape(chord) : chord) + "\r\n    ")]) : _vm._e()
   }), _vm._v(" "), _c('span', {
     staticClass: "tab-line"
   }, [_vm._v(_vm._s(_vm.draw(_vm.strings.e)))]), _vm._v(" "), _c('span', {

@@ -1,5 +1,6 @@
 import Pattern from './pattern';
 import Note from './note';
+import Chord from './chord';
 import {strings, constants} from './../constants';
 
 const Bar = {};
@@ -21,6 +22,8 @@ Bar.draw = (chords, string, pattern, index) => {
   if (index % constants.BEATS_PER_BAR === 0) {
     output += string + '|';
   }
+
+  chords = chords.map(chord => Chord.find(chord));
 
   let multiplier = 1;
   let currentChord = 0;
