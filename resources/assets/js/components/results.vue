@@ -25,3 +25,10 @@ export default {
     props: ['progression']
 }
 </script>
+
+<style scoped>
+td {
+    padding: 20px;
+    width: 220px;
+}
+</style>
