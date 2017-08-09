@@ -3,6 +3,7 @@ import axios from 'axios';
 import _ from 'lodash';
 import chordMap from './chord-map';
 
+Vue.component('page-header', require('./components/header.vue'));
 Vue.component('tab', require('./components/tab.vue'));
 Vue.component('tab-bar', require('./components/tab-bar.vue'));
 Vue.component('results', require('./components/results.vue'));

@@ -7,9 +7,8 @@
     @include('layouts.parts.css')
 </head>
 <body class="main">
-    @include('pages.header')
-
     <div id="app">
+        <page-header></page-header>
         @include('pages.form')
         <section class="section results" v-if="chords" style="padding-top:5px">
             <hr>
