@@ -14,7 +14,6 @@
     "cross-env": "^5.0.1",
     "laravel-mix": "^1.0",
     "lodash": "^4.17.4",
-    "minifier": "^0.8.1",
     "vue": "^2.1.10"
   }
 }
