@@ -6,6 +6,10 @@ html, body {
     background: #FFF;
 }
 
+.has-pb0 {
+    padding-bottom: 0;
+}
+
 .flex-center {
   display: flex;
   flex-direction: column;

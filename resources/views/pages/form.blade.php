@@ -1,4 +1,4 @@
-<section class="section" style="padding-bottom: 0">
+<section class="section has-pb0">
 	<div class="container">
 	    <h2 class="subtitle">
 	    Choose the key and duration of your progression.
