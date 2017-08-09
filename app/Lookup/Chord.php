@@ -2,6 +2,9 @@
 
 namespace App\Lookup;
 
+/**
+ * Chord related constants
+ */
 abstract class Chord
 {
     const MAJOR = 'major';

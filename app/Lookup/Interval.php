@@ -2,6 +2,9 @@
 
 namespace App\Lookup;
 
+/**
+ * Interval related constants
+ */
 abstract class Interval
 {
     const ROOT = 0;
