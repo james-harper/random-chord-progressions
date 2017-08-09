@@ -1,15 +1,20 @@
 <template>
 <footer class="footer is-hidden-mobile" :class="{'fixed': !fixed}">
-  <div class="container">
-    <div class="content has-text-centered">
-      <p>
-      <strong>Random Chord Progression Generator</strong><br>
-         <a href="mailto:james.is@coolasf.uk">
-        	 james.is@coolasf.uk
-        </a>
-      </p>
+    <div class="container">
+        <div class="content has-text-centered">
+            <p>
+                <strong>Random Chord Progression Generator</strong>
+
+                <a href="https://github.com/james-harper/random-chord-progressions/" target="_blank">
+                    <span class="icon"><i class="fa fa-github"></i></span>
+                </a>
+                <br>
+                <a href="mailto:james.is@coolasf.uk">
+                    james.is@coolasf.uk
+                </a>
+            </p>
+        </div>
     </div>
-  </div>
 </footer>
 </template>
 
