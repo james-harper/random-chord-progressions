@@ -15,7 +15,7 @@ new Vue({
         root: 'A',
         tonality: 'major',
         bars: '8',
-        mode: 'table',
+        mode: window.localStorage.getItem('mode') || 'table',
         progression: false,
         chords: false,
         isLoading: false
@@ -37,6 +37,7 @@ new Vue({
         },
         selectMode(mode) {
             this.mode = mode;
+            window.localStorage.setItem('mode', mode);
         }
     },
     created() {
