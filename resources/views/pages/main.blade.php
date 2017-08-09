@@ -27,7 +27,7 @@
             </div>
         </section>
 
-        <page-footer :fixed="!!progression && mode==='tab'"></page-footer>
+        <page-footer :fixed="!!progression && (mode==='tab' || bars >= 12)"></page-footer>
     </div>
 @include('layouts.parts.js')
 </body>
