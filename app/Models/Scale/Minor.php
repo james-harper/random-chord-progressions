@@ -2,10 +2,19 @@
 
 namespace App\Models\Scale;
 
+/**
+ * Minor scale
+ */
 class Minor extends BaseScale
 {
+    /**
+     * Use sharps instead of flats when any of these notes
+     * are the root
+     *
+     * @var array
+     */
     protected $useSharps = [
-        'B', 'C#', 'D#', 'E','F#', 'G#',
+        'A', 'B', 'C#', 'D#', 'E','F#', 'G#',
     ];
 
     /**

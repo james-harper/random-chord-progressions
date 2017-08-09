@@ -5,8 +5,16 @@ namespace App\Models\Key;
 use App\Lookup\Chord;
 use App\Models\Scale\Major as MajorScale;
 
+/**
+ * Major Key
+ */
 class Major extends BaseKey
 {
+    /**
+     * Constructor
+     *
+     * @param string $root
+     */
     public function __construct(string $root)
     {
         parent::__construct($root);
@@ -15,6 +23,9 @@ class Major extends BaseKey
         $this->chords = $this->findChords();
     }
 
+    /**
+     * @return array
+     */
     public function getChordIntervals() : array
     {
         return [

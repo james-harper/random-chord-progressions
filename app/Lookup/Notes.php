@@ -2,6 +2,9 @@
 
 namespace App\Lookup;
 
+/**
+ * Note related constants
+ */
 abstract class Notes
 {
     const ALL = [

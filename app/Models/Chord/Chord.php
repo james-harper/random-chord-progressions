@@ -4,9 +4,19 @@ namespace App\Models\Chord;
 
 use App\Lookup\Chord as Ext;
 
+/**
+ * Chord classes should extend BaseChord
+ */
 abstract class Chord
 {
-    public static function make(string $root, string $extension = '')
+    /**
+     * Create a new chord
+     *
+     * @param string $root
+     * @param string $extension
+     * @return BaseChord
+     */
+    public static function make(string $root, string $extension = '') : BaseChord
     {
         $extension = strtolower($extension);
 

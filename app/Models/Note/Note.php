@@ -2,7 +2,10 @@
 
 namespace App\Models\Note;
 
-class Note
+/**
+ * Note helper functions
+ */
+abstract class Note
 {
     const FLAT = 'b';
     const SHARP = '#';
