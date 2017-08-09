@@ -29,3 +29,8 @@ section.results {
 .is-centered {
     text-align:center;
 }
+
+.mode-select {
+    margin-top: -20px;
+    padding-bottom: 20px;
+}

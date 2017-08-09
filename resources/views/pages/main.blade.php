@@ -13,7 +13,7 @@
         <section class="section results" v-if="chords">
             <hr>
             <div class="container flex-center">
-                <div class="field is-grouped" style="margin-top: -20px; padding-bottom: 20px">
+                <div class="field is-grouped mode-select">
                     <a class="button" :class="{'is-info': mode==='table'}" @click="selectMode('table')">
                     Table
                     </a>
