@@ -1,5 +1,7 @@
 <?php
 
+use App\Lookup\Notes;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,7 +16,5 @@
 Route::get('/', function () {
     return view()
         ->make('pages.main')
-        ->with('notes', \App\Lookup\Notes::ALL);
+        ->with('notes', Notes::ALL);
 });
-
-Route::post('generate', 'ProgressionController@generate');

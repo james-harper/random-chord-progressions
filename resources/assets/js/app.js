@@ -25,7 +25,7 @@ new Vue({
             this.isLoading = true;
             this.progression = false;
 
-            axios.post('/generate', {
+            axios.post('/api/generate', {
                 key: this.root,
                 tonality: this.tonality,
                 bars: this.bars
