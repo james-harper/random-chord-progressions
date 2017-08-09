@@ -3,7 +3,7 @@
     <span
         v-if="showChordNames"
         v-for="(chord, index) in chordShapes"
-        style="font-size:11px"
+        class="tab-label"
     >
         {{ index > 0 ? ' | ' : ''}}
         {{!Chord.isNamed(chord) ? Chord.findByShape(chord) : chord}}
@@ -59,5 +59,9 @@ export default {
 <style scoped>
 .tab-line {
   display: block;
+}
+
+.tab-label {
+    font-size:11px;
 }
 </style>
