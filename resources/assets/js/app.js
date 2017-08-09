@@ -43,5 +43,17 @@ new Vue({
         this.root = _sample(Object.keys(chordMap));
         this.tonality = _sample(['major', 'minor']);
         this.bars = _sample([4, 8]);
+
+        document.addEventListener('keydown', e => {
+            switch (e.key) {
+                case 'Enter':
+                    this.generate();
+                    break;
+                case 't':
+                    let m = this.mode === 'table' ? 'tab' : 'table';
+                    this.selectMode(m);
+                    break;
+            }
+        });
     }
 });
