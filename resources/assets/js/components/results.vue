@@ -2,7 +2,7 @@
 <div>
     <table class="table is-bordered is-striped">
         <tr v-for="bar in bars">
-            <td class="is-centered"  v-for="chords in bar">
+            <td class="is-centered"  v-for="chords in bar" :class="{'p20': progression.length <= 8}">
                 <span>
                     {{chords.join(' | ')}}
                 </span>
@@ -28,7 +28,10 @@ export default {
 
 <style scoped>
 td {
-    padding: 20px;
     width: 220px;
+}
+
+.p20 {
+    padding: 20px;
 }
 </style>
