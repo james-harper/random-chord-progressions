@@ -24,7 +24,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .tab-section {
   width: 100%;
   padding: 0 10px;
@@ -36,17 +36,5 @@ export default {
 
 .tab-row .bar {
   float: left;
-}
-
-.flex-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.courier-new {
-  font-family: courier new;
-  font-size: 15px;
 }
 </style>

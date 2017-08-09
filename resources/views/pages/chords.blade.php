@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-	@include('layouts.parts.meta')
-	<title>Random Chord Progression Generator</title>
-	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-	@include('layouts.parts.css')
+    @include('layouts.parts.meta')
+    <title>Random Chord Progression Generator</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    @include('layouts.parts.css')
 </head>
 <body class="main">
-	@include('pages.header')
+    @include('pages.header')
 
     <div id="app">
-	    @include('pages.form')
-        <section class="section" v-if="chords" style="padding-top:5px">
+        @include('pages.form')
+        <section class="section results" v-if="chords" style="padding-top:5px">
             <hr>
             <div class="container flex-center">
                 <div class="field is-grouped" style="margin-top: -20px; padding-bottom: 20px">
@@ -30,7 +30,6 @@
 
         <page-footer :fixed="!!progression && mode==='tab'"></page-footer>
     </div>
-
 @include('layouts.parts.js')
 </body>
 </html>
