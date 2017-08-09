@@ -6,19 +6,56 @@ use App\Lookup\Chord;
 use App\Models\Chord\BaseChord;
 use App\Models\Key\BaseKey;
 
+/**
+ * Random Chord Progression
+ */
 class RandomProgression
 {
+    /**
+     * Bars in the progression
+     *
+     * @var array
+     */
     protected $bars = [];
+
+    /**
+     * Chords that can be randomly selected from
+     *
+     * @var array
+     */
     protected $chords = [];
+
+    /**
+     * Chord extensions that should not be included in the progression
+     *
+     * @var array
+     */
     protected $excludedExtensions = [Chord::DIMINISHED];
+
+    /**
+     * The key that the progression is in
+     *
+     * @var BaseKey
+     */
     protected $key;
 
+    /**
+     * Constructor
+     *
+     * @param BaseKey $key
+     * @param int $numBars
+     */
     public function __construct(BaseKey $key, int $numBars)
     {
         $this->key = $key;
         $this->generateRandomBars($numBars);
     }
 
+    /**
+     * Get chords that can be selected from.
+     *
+     * @return array
+     */
     public function getChords() : array
     {
         if (!empty($this->chords)) {
@@ -36,16 +73,32 @@ class RandomProgression
         );
     }
 
+    /**
+     * Get bars in the progressions
+     *
+     * @return array
+     */
     public function getBars() : array
     {
         return $this->bars;
     }
 
+    /**
+     * Add a bar onto the end of the progression
+     *
+     * @param array $bar
+     * @return void
+     */
     public function addBar(array $bar) : void
     {
         $this->bars[] = $bar;
     }
 
+    /**
+     * Randomly select a chord
+     *
+     * @return BaseChord
+     */
     protected function getRandomChord() : BaseChord
     {
         $chords = $this->getChords();
@@ -53,6 +106,14 @@ class RandomProgression
         return $chords[$randomIndex];
     }
 
+    /**
+     * Randomly generate the given number of bars
+     *
+     * @todo Adjust so that each bar has the possibilty of containing more than one chord
+     *
+     * @param int $numBars
+     * @return void
+     */
     protected function generateRandomBars(int $numBars) : void
     {
         for ($i = 0; $i < $numBars; $i++) {
