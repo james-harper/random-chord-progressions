@@ -1,5 +1,6 @@
 import {constants} from './../constants';
-import {repeat as _repeat, random as _random} from 'lodash';
+import _repeat from 'lodash/repeat';
+import _random from 'lodash/random';
 
 const Pattern = {};
 

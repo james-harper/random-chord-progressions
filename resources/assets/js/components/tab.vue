@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import {chunk as _chunk} from 'lodash';
+import _chunk from 'lodash/chunk'
 import {constants} from './../constants';
 
 export default {

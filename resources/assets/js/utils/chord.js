@@ -1,8 +1,6 @@
-import {
-    capitalize as _capitalize,
-    each as _each,
-    sample as _sample
-} from 'lodash';
+import _capitalize from 'lodash/capitalize';
+import _each from 'lodash/foreach';
+import _sample from 'lodash/sample';
 import {supportedChords} from './../constants';
 import Note from './note';
 import chordMap from './../chord-map';

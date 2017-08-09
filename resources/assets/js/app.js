@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import axios from 'axios';
-import {sample as _sample} from 'lodash';
+import _sample from 'lodash/sample';
 import chordMap from './chord-map';
 
 Vue.component('page-header', require('./components/header.vue'));
