@@ -2,21 +2,22 @@
 
 namespace App\Models\Key;
 
+/**
+ * All chords should extend BaseKey
+ */
 abstract class Key
 {
     const MAJOR = 'major';
     const MINOR = 'minor';
 
     /**
-     * Return an instance of a key
-     * This currently returns the appropriate scale
-     * but this may change once chords have been added
+     * Create a new key instance
      *
      * @param string $root
      * @param string $tonality
-     * @return App\Models\Scale\BaseScale
+     * @return BaseKey
      */
-    public static function make(string $root, string $tonality = '')
+    public static function make(string $root, string $tonality = '') : BaseKey
     {
         $tonality = strtolower($tonality);
 
