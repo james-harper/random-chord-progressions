@@ -9,6 +9,14 @@ use Illuminate\Http\Request;
 
 class ProgressionController extends Controller
 {
+    /**
+     * POST /generate
+     *
+     * Generates a random chord progression.
+     * 'key', 'tonality', and 'bars' should be passed
+     *
+     * @return string Random chord progression as JSON
+     */
     public function generate()
     {
         $key = Key::make(
