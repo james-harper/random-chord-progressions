@@ -1,4 +1,8 @@
-import _ from 'lodash';
+import {
+    capitalize as _capitalize,
+    each as _each,
+    sample as _sample
+} from 'lodash';
 import {supportedChords} from './../constants';
 import Note from './note';
 import chordMap from './../chord-map';
@@ -15,10 +19,10 @@ const Chord = {};
 Chord.findByShape = target => {
   let result = '?';
 
-  _(chordMap).each((chords,root) => {
-    _(chords).each((chord, tonality) => {
+  _each(chordMap, (chords,root) => {
+    _each(chords, (chord, tonality) => {
       if (chord.length) {
-        _(chord).each(shape => {
+        _each(chord, shape => {
           if (shape === target) {
             return result = root + ' ' + tonality;
           }
@@ -43,7 +47,7 @@ Chord.findByName = name => {
 
   name = name.replace(/\s/g, splitBy).toLowerCase();
 
-  _(supportedChords).each(ext => {
+  _each(supportedChords, ext => {
     if (name.includes(ext)) {
       name = name.replace(splitBy, '');
       root = name.split(ext)[0];
@@ -60,7 +64,7 @@ Chord.findByName = name => {
   }
 
   root = Note.convertAccidental(root);
-  return chordMap[_.capitalize(root)][tonality];
+  return chordMap[_capitalize(root)][tonality];
 };
 
 /**
@@ -93,7 +97,7 @@ Chord.isNamed = chord => {
 Chord.find = chord => {
   if (Chord.isNamed(chord)) {
     let shapes = Chord.findByName(chord);
-    return (shapes.length) ? _.sample(shapes) : '?';
+    return (shapes.length) ? _sample(shapes) : '?';
   }
 
   return Chord.findByShape(chord);

@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import axios from 'axios';
-import _ from 'lodash';
+import {sample as _sample} from 'lodash';
 import chordMap from './chord-map';
 
 Vue.component('page-header', require('./components/header.vue'));
@@ -40,8 +40,8 @@ new Vue({
         }
     },
     created() {
-        this.root = _.sample(Object.keys(chordMap));
-        this.tonality = _.sample(['major', 'minor']);
-        this.bars = _.sample([4, 8]);
+        this.root = _sample(Object.keys(chordMap));
+        this.tonality = _sample(['major', 'minor']);
+        this.bars = _sample([4, 8]);
     }
 });

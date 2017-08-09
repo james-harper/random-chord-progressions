@@ -11,14 +11,14 @@
 </template>
 
 <script>
-import _ from 'lodash';
+import {chunk as _chunk} from 'lodash';
 import {constants} from './../constants';
 
 export default {
     props: ['progression', 'showChordNames'],
     computed: {
         chunked() {
-            return _.chunk(this.progression,constants.BEATS_PER_BAR);
+            return _chunk(this.progression,constants.BEATS_PER_BAR);
         }
     }
 };

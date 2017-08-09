@@ -1,4 +1,5 @@
 import {constants} from './../constants';
+import {repeat as _repeat, random as _random} from 'lodash';
 
 const Pattern = {};
 
@@ -13,7 +14,7 @@ Pattern.desiredLength = constants.BEATS_PER_BAR * 4;
 Pattern.fitToBar = rhythm => {
   if (rhythm.length < 1) { rhythm = '-';}
 
-  rhythm = _.repeat(rhythm, Pattern.desiredLength/rhythm.length);
+  rhythm = _repeat(rhythm, Pattern.desiredLength/rhythm.length);
 
   if (rhythm.length < Pattern.desiredLength) {
     let padLength = Pattern.desiredLength - rhythm.length;
@@ -34,7 +35,7 @@ Pattern.random = () => {
   let rhythm = 'x';
 
   for (let i = 0; i < Pattern.desiredLength - 1; i++) {
-    rhythm += (_.random(1) > 0) ? 'x' : '-';
+    rhythm += (_random(1) > 0) ? 'x' : '-';
   }
 
   return rhythm;

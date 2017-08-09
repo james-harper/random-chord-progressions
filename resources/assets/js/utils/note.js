@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import {toUpper as _toUpper, isNumber as _isNumber} from 'lodash';
 import Helpers from './../helpers';
 
 const Note = {};
@@ -13,9 +13,9 @@ Note.SHARP = '#';
  * @returns {string} The converted note
  */
 Note.convertAccidental = note => {
-  if (note.length === 1) { return _.toUpper(note); }
+  if (note.length === 1) { return _toUpper(note); }
 
-  let converted = _.toUpper(note.charAt(0));
+  let converted = _toUpper(note.charAt(0));
   if (note.charAt(1) === Note.SHARP) {
     converted = Helpers.Character.next(converted);
     note = (converted < 'H') ? converted : 'A';
@@ -39,7 +39,7 @@ Note.isValid = note => {
   if (note === 'x' || note === 'X') return true;
   if (note === '-') return true;
   if (isNaN(note)) return false;
-  if (_.isNumber(note)) return true;
+  if (_isNumber(note)) return true;
   return (['a', 'b', 'c', 'd', 'e', 'f'].includes(note.toLowerCase()));
 }
 

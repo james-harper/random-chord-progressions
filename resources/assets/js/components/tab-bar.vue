@@ -19,7 +19,6 @@
 </template>
 
 <script>
-import _ from 'lodash';
 import {supportedChords, strings} from './../constants';
 import Bar from './../utils/bar';
 import Pattern from './../utils/pattern';
