@@ -5,13 +5,39 @@ namespace App\Models\Scale;
 use App\Lookup\Notes;
 use App\Models\Note\Note;
 
+/**
+ * All scales should extend BaseScale
+ */
 abstract class BaseScale
 {
+    /**
+     * The root note
+     *
+     * @var string
+     */
     protected $root;
+
+    /**
+     * The notes in this scale
+     *
+     * @var string[]
+     */
     protected $notes = [];
 
+    /**
+     * Flats are used by default.
+     * If this scale should use sharps for certain root notes,
+     * they can be specified here.
+     *
+     * @var string[]
+     */
     protected $useSharps = [];
 
+    /**
+     * Constructor
+     *
+     * @param string $root
+     */
     public function __construct(string $root)
     {
         $this->root = $root;
