@@ -6,7 +6,7 @@
         class="tab-label"
     >
         {{ index > 0 ? ' | ' : ''}}
-        {{!Chord.isNamed(chord) ? Chord.findByShape(chord) : chord}}
+        {{ chord.name }}
     </span>
 
     <span class="tab-line">{{draw(strings.e)}}</span>
@@ -45,12 +45,17 @@ export default {
         this.bar.pattern = Pattern.random();
       }
 
-      return Bar.draw(this.chordShapes, string, this.bar.pattern, this.index);
+      let shapes = [];
+      this.chordShapes.forEach(chord => { shapes.push(chord.shape) });
+      return Bar.draw(shapes, string, this.bar.pattern, this.index);
     }
   },
   created() {
       this.bar.chords.forEach(chord => {
-        this.chordShapes.push(Chord.find(chord));
+        this.chordShapes.push({
+          'name': chord,
+          'shape': Chord.find(chord)
+        });
       });
   }
 };
