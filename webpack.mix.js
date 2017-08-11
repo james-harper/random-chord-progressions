@@ -1,4 +1,4 @@
 let mix = require('laravel-mix');
 
-mix.js('resources/assets/js/app.js', 'public/js');
-mix.styles(['resources/assets/css/*.css'], 'public/css/app.css');
+mix.js('resources/assets/js/app.js', 'public/js').version();
+mix.styles(['resources/assets/css/*.css'], 'public/css/app.css').version();
