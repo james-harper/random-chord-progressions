@@ -30,6 +30,7 @@ abstract class Chord
      *
      * @param string $root
      * @param string $extension
+     * @throws InvalidChordException
      * @return BaseChord
      */
     public static function make(string $root, string $extension = '') : BaseChord
