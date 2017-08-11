@@ -1,5 +1,8 @@
 <template>
-<footer class="footer is-hidden-mobile" :class="{'fixed': !fixed}">
+<footer
+  class="footer is-hidden-mobile"
+  :class="{'fixed': !fixed, 'is-hidden': isMobile}"
+>
     <div class="container">
         <div class="content has-text-centered">
             <p>
@@ -19,8 +22,19 @@
 </template>
 
 <script>
+import MobileDetect from 'mobile-detect';
+
 export default {
-    props: ['fixed']
+    data() {
+      return {
+        isMobile: false
+      }
+    },
+    props: ['fixed'],
+    created() {
+      let md = new MobileDetect(window.navigator.userAgent);
+      this.isMobile = !!md.mobile();
+    }
 }
 </script>
 
