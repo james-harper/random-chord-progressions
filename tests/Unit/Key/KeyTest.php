@@ -2,6 +2,7 @@
 
 namespace Tests\Unit\Key;
 
+use App\Exceptions\InvalidKeyException;
 use App\Models\Key\Key;
 use App\Models\Scale\Chromatic;
 use App\Models\Scale\Major;
@@ -57,5 +58,11 @@ class KeyTest extends TestCase
             'A minor',
             'B dim'
         ]);
+    }
+
+    public function testInvalidKey()
+    {
+        $this->expectException(InvalidKeyException::class);
+        $key = Key::make('C', 'INVALID');
     }
 }
