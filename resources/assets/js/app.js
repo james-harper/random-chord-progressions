@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import axios from 'axios';
 import _sample from 'lodash/sample';
+import MobileDetect from 'mobile-detect';
 import chordMap from './chord-map';
 
 Vue.component('page-header', require('./components/header.vue'));
@@ -18,7 +19,8 @@ new Vue({
         mode: window.localStorage.getItem('mode') || 'table',
         progression: false,
         chords: false,
-        isLoading: false
+        isLoading: false,
+        isMobile: false
     },
     methods: {
         generate() {
@@ -44,6 +46,9 @@ new Vue({
         this.root = _sample(Object.keys(chordMap));
         this.tonality = _sample(['major', 'minor']);
         this.bars = _sample([4, 8]);
+
+        let md = new MobileDetect(window.navigator.userAgent);
+        this.isMobile = !!md.mobile();
 
         document.addEventListener('keydown', e => {
             switch (e.key) {
