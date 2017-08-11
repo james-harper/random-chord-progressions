@@ -2,6 +2,7 @@
 
 namespace App\Models\Chord;
 
+use App\Exceptions\InvalidChordException;
 use App\Lookup\Chord as Ext;
 
 /**
@@ -9,6 +10,21 @@ use App\Lookup\Chord as Ext;
  */
 abstract class Chord
 {
+    /**
+     * Mapping of chord extensions to chord classes
+     *
+     * @var array
+     */
+    private static $chords = [
+        '' => Major::class,
+        Ext::MAJOR => Major::class,
+        Ext::MINOR => Minor::class,
+        Ext::MAJOR_7 => Major7::class,
+        Ext::MINOR_7 => Minor7::class,
+        Ext::SEVENTH => Seventh::class,
+        Ext::DIMINISHED => Diminished::class,
+    ];
+
     /**
      * Create a new chord
      *
@@ -20,19 +36,13 @@ abstract class Chord
     {
         $extension = strtolower($extension);
 
-        switch ($extension) {
-            case Ext::DIMINISHED:
-                return new Diminished($root);
-            case Ext::MAJOR_7:
-                return new Major7($root);
-            case Ext::MINOR:
-                return new Minor($root);
-            case Ext::MINOR_7:
-                return new Minor7($root);
-            case Ext::SEVENTH:
-                return new Seventh($root);
-            default:
-                return new Major($root);
+        if (isset(self::$chords[$extension])) {
+            $class = self::$chords[$extension];
+            return new $class($root);
         }
+
+        throw new InvalidChordException(
+          'Cannot make chord: '.$root.' '.$extension
+        );
     }
 }

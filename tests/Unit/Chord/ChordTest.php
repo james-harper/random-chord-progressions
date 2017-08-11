@@ -2,6 +2,7 @@
 
 namespace Tests\Unit\Chord;
 
+use App\Exceptions\InvalidChordException;
 use App\Models\Chord\Chord;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
@@ -49,5 +50,11 @@ class ChordTest extends TestCase
         $cDim = Chord::make('C', 'dim');
         $this->assertEquals($cDim->getNotes(), ['C', 'Eb', 'Gb']);
         $this->assertEquals($cDim->getName(), 'C dim');
+    }
+
+    public function testInvalidChord()
+    {
+        $this->expectException(InvalidChordException::class);
+        $chord = Chord::make('C', 'INVALID');
     }
 }
