@@ -22,19 +22,13 @@
 </template>
 
 <script>
-import MobileDetect from 'mobile-detect';
-
 export default {
     data() {
       return {
-        isMobile: false
+        isMobile: /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
       }
     },
-    props: ['fixed'],
-    created() {
-      let md = new MobileDetect(window.navigator.userAgent);
-      this.isMobile = !!md.mobile();
-    }
+    props: ['fixed']
 }
 </script>
 
