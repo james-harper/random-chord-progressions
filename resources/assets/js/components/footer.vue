@@ -1,7 +1,7 @@
 <template>
 <footer
   class="footer"
-  :class="{'fixed': !fixed, 'is-hidden': isMobile}"
+  :class="{'fixed': fixed, 'is-hidden': isMobile}"
 >
     <div class="container">
         <div class="content has-text-centered">
