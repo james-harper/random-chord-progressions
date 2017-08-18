@@ -1,6 +1,6 @@
 <template>
 <footer
-  class="footer is-hidden-mobile"
+  class="footer"
   :class="{'fixed': !fixed, 'is-hidden': isMobile}"
 >
     <div class="container">
