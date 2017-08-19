@@ -1,7 +1,7 @@
 <template>
 <footer
   class="footer"
-  :class="{'fixed': fixed, 'is-hidden': isMobile || devtools.open}"
+  :class="{'fixed': fixed, 'is-hidden': hideFooter}"
 >
     <div class="container">
         <div class="content has-text-centered">
@@ -23,11 +23,20 @@
 
 <script>
 import devtools from 'devtools-detect';
+
 export default {
     data() {
       return {
         isMobile: /iPhone|iPad|iPod|Android/i.test(navigator.userAgent),
         devtools
+      }
+    },
+    computed: {
+      hideFooter() {
+        return (
+          this.isMobile ||
+          (this.devtools.open && this.devtools.orientation === 'horizontal')
+        );
       }
     },
     props: ['fixed']
