@@ -1826,7 +1826,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n.tab-line[data-v-69d06f40] {\r\n  display: block;\n}\n.tab-label[data-v-69d06f40] {\r\n    font-size:11px;\n}\r\n", ""]);
+exports.push([module.i, "\n.tab-line[data-v-69d06f40] {\r\n  display: block;\n}\n.tab-label[data-v-69d06f40] {\r\n  font-size:11px;\n}\r\n", ""]);
 
 // exports
 

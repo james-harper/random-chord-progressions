@@ -25,38 +25,38 @@ import Pattern from '@/utils/pattern';
 import Chord from '@/utils/chord';
 
 export default {
-    data() {
-        return {
-            Chord,
-            strings,
-            chordShapes: []
-        };
-    },
-    props: ['bar', 'index', 'showChordNames'],
-    methods: {
-    /**
-     * Render one bar of tablature for a single string
-     *
-     * @param {string} string
-     * @returns {string}
-     */
-    draw(string) {
-      if (this.bar.pattern.toLowerCase() === 'random') {
-        this.bar.pattern = Pattern.random();
-      }
-
-      let shapes = [];
-      this.chordShapes.forEach(chord => { shapes.push(chord.shape) });
-      return Bar.draw(shapes, string, this.bar.pattern, this.index);
-    }
+  data() {
+    return {
+      Chord,
+      strings,
+      chordShapes: []
+    };
   },
+  props: ['bar', 'index', 'showChordNames'],
+  methods: {
+  /**
+   * Render one bar of tablature for a single string
+   *
+   * @param {string} string
+   * @returns {string}
+   */
+  draw(string) {
+    if (this.bar.pattern.toLowerCase() === 'random') {
+      this.bar.pattern = Pattern.random();
+    }
+
+    let shapes = [];
+    this.chordShapes.forEach(chord => { shapes.push(chord.shape) });
+    return Bar.draw(shapes, string, this.bar.pattern, this.index);
+  }
+},
   created() {
-      this.bar.chords.forEach(chord => {
-        this.chordShapes.push({
-          'name': chord,
-          'shape': Chord.find(chord)
-        });
-      });
+  this.bar.chords.forEach(chord => {
+    this.chordShapes.push({
+      'name': chord,
+      'shape': Chord.find(chord)
+    });
+  });
   }
 };
 </script>
@@ -67,6 +67,6 @@ export default {
 }
 
 .tab-label {
-    font-size:11px;
+  font-size:11px;
 }
 </style>
