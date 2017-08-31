@@ -1811,7 +1811,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n.footer[data-v-1115a3a6] {\r\n  max-height:  10px;\r\n  padding: 30px 5px 60px;\r\n  border-top: 1px solid #d3d6db;\r\n  bottom:0;\r\n  width:100%;\n}\n.fixed[data-v-1115a3a6] {\r\n  position: fixed;\n}\r\n", ""]);
+exports.push([module.i, "\n.footer[data-v-1115a3a6] {\r\n  max-height: 10px;\r\n  padding: 30px 5px 60px;\r\n  border-top: 1px solid #d3d6db;\r\n  bottom: 0;\r\n  width: 100%;\n}\n.fixed[data-v-1115a3a6] {\r\n  position: fixed;\n}\r\n", ""]);
 
 // exports
 

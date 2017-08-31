@@ -34,11 +34,11 @@ export default {
 
 <style scoped>
 .footer {
-  max-height:  10px;
+  max-height: 10px;
   padding: 30px 5px 60px;
   border-top: 1px solid #d3d6db;
-  bottom:0;
-  width:100%;
+  bottom: 0;
+  width: 100%;
 }
 
 .fixed {
