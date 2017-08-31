@@ -17,21 +17,21 @@ import _chunk from 'lodash/chunk';
 import {constants} from '@/constants';
 
 export default {
-    computed: {
-        bars() {
-            return _chunk(this.progression, constants.BEATS_PER_BAR);
-        }
-    },
-    props: ['progression']
+  computed: {
+    bars() {
+      return _chunk(this.progression, constants.BEATS_PER_BAR);
+    }
+  },
+  props: ['progression']
 }
 </script>
 
 <style scoped>
 td {
-    width: 220px;
+  width: 220px;
 }
 
 .p20 {
-    padding: 20px;
+  padding: 20px;
 }
 </style>

@@ -1682,12 +1682,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    computed: {
-        bars: function bars() {
-            return __WEBPACK_IMPORTED_MODULE_0_lodash_chunk___default()(this.progression, __WEBPACK_IMPORTED_MODULE_1__constants__["a" /* constants */].BEATS_PER_BAR);
-        }
-    },
-    props: ['progression']
+  computed: {
+    bars: function bars() {
+      return __WEBPACK_IMPORTED_MODULE_0_lodash_chunk___default()(this.progression, __WEBPACK_IMPORTED_MODULE_1__constants__["a" /* constants */].BEATS_PER_BAR);
+    }
+  },
+  props: ['progression']
 });
 
 /***/ }),
@@ -1858,7 +1858,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\ntd[data-v-9866be0a] {\r\n    width: 220px;\n}\n.p20[data-v-9866be0a] {\r\n    padding: 20px;\n}\r\n", ""]);
+exports.push([module.i, "\ntd[data-v-9866be0a] {\r\n  width: 220px;\n}\n.p20[data-v-9866be0a] {\r\n  padding: 20px;\n}\r\n", ""]);
 
 // exports
 
