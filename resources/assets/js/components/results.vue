@@ -1,15 +1,13 @@
-<template>
-<div>
-    <table class="table is-bordered is-striped">
-        <tr v-for="bar in bars">
-            <td class="is-centered"  v-for="chords in bar" :class="{'p20': progression.length <= 8}">
-                <span>
-                    {{chords.join(' | ')}}
-                </span>
-            </td>
-        </tr>
-    </table>
-</div>
+<template lang="pug">
+  div
+    table(class="table is-bordered is-striped")
+      tr(v-for="bar in bars")
+        td(
+          v-for="chords in bar",
+          class="is-centered",
+          :class="{'p20': progression.length <= 8}"
+        )
+          span {{ chords.join(' | ') }}
 </template>
 
 <script>
