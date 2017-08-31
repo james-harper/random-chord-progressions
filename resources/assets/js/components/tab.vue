@@ -15,12 +15,12 @@ import _chunk from 'lodash/chunk'
 import {constants} from '@/constants';
 
 export default {
-    props: ['progression', 'showChordNames'],
-    computed: {
-        chunked() {
-            return _chunk(this.progression,constants.BEATS_PER_BAR);
-        }
+  props: ['progression', 'showChordNames'],
+  computed: {
+    chunked() {
+      return _chunk(this.progression,constants.BEATS_PER_BAR);
     }
+  }
 };
 </script>
 

@@ -1792,12 +1792,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['progression', 'showChordNames'],
-    computed: {
-        chunked: function chunked() {
-            return __WEBPACK_IMPORTED_MODULE_0_lodash_chunk___default()(this.progression, __WEBPACK_IMPORTED_MODULE_1__constants__["a" /* constants */].BEATS_PER_BAR);
-        }
+  props: ['progression', 'showChordNames'],
+  computed: {
+    chunked: function chunked() {
+      return __WEBPACK_IMPORTED_MODULE_0_lodash_chunk___default()(this.progression, __WEBPACK_IMPORTED_MODULE_1__constants__["a" /* constants */].BEATS_PER_BAR);
     }
+  }
 });
 
 /***/ }),
