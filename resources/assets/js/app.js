@@ -1,13 +1,13 @@
 import Vue from 'vue';
 import axios from 'axios';
 import _sample from 'lodash/sample';
-import chordMap from './chord-map';
+import chordMap from '@/chord-map';
 
-Vue.component('page-header', require('./components/header.vue'));
-Vue.component('tab', require('./components/tab.vue'));
-Vue.component('tab-bar', require('./components/tab-bar.vue'));
-Vue.component('results', require('./components/results.vue'));
-Vue.component('page-footer', require('./components/footer.vue'));
+Vue.component('page-header', require('@/components/header.vue'));
+Vue.component('tab', require('@/components/tab.vue'));
+Vue.component('tab-bar', require('@/components/tab-bar.vue'));
+Vue.component('results', require('@/components/results.vue'));
+Vue.component('page-footer', require('@/components/footer.vue'));
 
 new Vue({
     el: '#app',

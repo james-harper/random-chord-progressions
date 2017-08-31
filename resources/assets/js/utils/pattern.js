@@ -1,4 +1,4 @@
-import {constants} from './../constants';
+import {constants} from '@/constants';
 import _repeat from 'lodash/repeat';
 import _random from 'lodash/random';
 

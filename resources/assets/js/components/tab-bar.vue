@@ -19,10 +19,10 @@
 </template>
 
 <script>
-import {supportedChords, strings} from './../constants';
-import Bar from './../utils/bar';
-import Pattern from './../utils/pattern';
-import Chord from './../utils/chord';
+import {supportedChords, strings} from '@/constants';
+import Bar from '@/utils/bar';
+import Pattern from '@/utils/pattern';
+import Chord from '@/utils/chord';
 
 export default {
     data() {

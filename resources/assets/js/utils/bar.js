@@ -1,7 +1,7 @@
-import Pattern from './pattern';
-import Note from './note';
-import Chord from './chord';
-import {strings, constants} from './../constants';
+import Pattern from '@/utils/pattern';
+import Note from '@/utils/note';
+import Chord from '@/utils/chord';
+import {strings, constants} from '@/constants';
 
 const Bar = {};
 
