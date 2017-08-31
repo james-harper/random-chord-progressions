@@ -1,13 +1,9 @@
-<template>
-<div>
-    <div class="tab-section courier-new flex-center">
-        <span class="tab-row row" v-for="(chunk, index) in chunked">
-            <span v-for="(bar, index) in chunk" class="bar">
-                <tab-bar :index="index" :bar="bar" :showChordNames="showChordNames" />
-            </span>
-        </span>
-    </div>
-</div>
+<template lang="pug">
+  div
+    div(class="tab-section courier-new flex-center")
+      span(v-for="(chunk,index) in chunked", :key="index", class="tab-row row")
+        span(v-for="(bar, index) in chunk", :key="index", class="bar")
+          tab-bar(:index="index" :bar="bar" :showChordNames="showChordNames")
 </template>
 
 <script>
