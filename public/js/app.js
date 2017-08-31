@@ -4729,7 +4729,7 @@ if (false) {
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-32480798\",\"hasScoped\":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/header.vue":
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-32480798\",\"hasScoped\":false}!./node_modules/vue-loader/lib/template-compiler/preprocessor.js?engine=pug!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/header.vue":
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -4743,14 +4743,14 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "container"
   }, [_c('h1', {
     staticClass: "title"
-  }, [_vm._v("\r\n                Random Chord Progression Generator\r\n            ")]), _vm._v(" "), _c('h2', {
+  }, [_vm._v("Random Chord Progression Generator")]), _c('h2', {
     staticClass: "subtitle"
   }, [_c('i', {
     staticClass: "fa fa-music",
     attrs: {
       "aria-hidden": "true"
     }
-  }), _vm._v("\r\n                Create chord progressions with the click of a button\r\n            ")])])])])
+  }), _vm._v("\nCreate chord progressions with the click of a button")])])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
@@ -15636,7 +15636,7 @@ var Component = __webpack_require__("./node_modules/vue-loader/lib/component-nor
   /* script */
   null,
   /* template */
-  __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-32480798\",\"hasScoped\":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/header.vue"),
+  __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-32480798\",\"hasScoped\":false}!./node_modules/vue-loader/lib/template-compiler/preprocessor.js?engine=pug!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/header.vue"),
   /* styles */
   null,
   /* scopeId */
