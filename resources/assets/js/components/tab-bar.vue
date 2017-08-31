@@ -1,21 +1,20 @@
-<template>
-<span>
-    <span
-        v-if="showChordNames"
-        v-for="(chord, index) in chordShapes"
-        class="tab-label"
-    >
-        {{ index > 0 ? ' | ' : ''}}
-        {{ chord.name }}
-    </span>
+<template lang="pug">
+  span
+    span(
+      v-if="showChordNames"
+      v-for="(chord, index) in chordShapes"
+      :key="index"
+      class="tab-label"
+    ).
+      {{ index > 0 ? ' | ' : ''}}
+      {{ chord.name }}
 
-    <span class="tab-line">{{draw(strings.e)}}</span>
-    <span class="tab-line">{{draw(strings.B)}}</span>
-    <span class="tab-line">{{draw(strings.G)}}</span>
-    <span class="tab-line">{{draw(strings.D)}}</span>
-    <span class="tab-line">{{draw(strings.A)}}</span>
-    <span class="tab-line">{{draw(strings.E)}}</span>
-</span>
+    span(class="tab-line") {{draw(strings.e)}}
+    span(class="tab-line") {{draw(strings.B)}}
+    span(class="tab-line") {{draw(strings.G)}}
+    span(class="tab-line") {{draw(strings.D)}}
+    span(class="tab-line") {{draw(strings.A)}}
+    span(class="tab-line") {{draw(strings.E)}}
 </template>
 
 <script>

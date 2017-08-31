@@ -1718,7 +1718,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 
 
@@ -4749,25 +4748,26 @@ if (false) {
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-69d06f40\",\"hasScoped\":true}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/tab-bar.vue":
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-69d06f40\",\"hasScoped\":true}!./node_modules/vue-loader/lib/template-compiler/preprocessor.js?engine=pug!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/tab-bar.vue":
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('span', [_vm._l((_vm.chordShapes), function(chord, index) {
     return (_vm.showChordNames) ? _c('span', {
+      key: index,
       staticClass: "tab-label"
-    }, [_vm._v("\r\n        " + _vm._s(index > 0 ? ' | ' : '') + "\r\n        " + _vm._s(chord.name) + "\r\n    ")]) : _vm._e()
-  }), _vm._v(" "), _c('span', {
+    }, [_vm._v(_vm._s(index > 0 ? ' | ' : '') + "\n" + _vm._s(chord.name) + "\n")]) : _vm._e()
+  }), _c('span', {
     staticClass: "tab-line"
-  }, [_vm._v(_vm._s(_vm.draw(_vm.strings.e)))]), _vm._v(" "), _c('span', {
+  }, [_vm._v(_vm._s(_vm.draw(_vm.strings.e)))]), _c('span', {
     staticClass: "tab-line"
-  }, [_vm._v(_vm._s(_vm.draw(_vm.strings.B)))]), _vm._v(" "), _c('span', {
+  }, [_vm._v(_vm._s(_vm.draw(_vm.strings.B)))]), _c('span', {
     staticClass: "tab-line"
-  }, [_vm._v(_vm._s(_vm.draw(_vm.strings.G)))]), _vm._v(" "), _c('span', {
+  }, [_vm._v(_vm._s(_vm.draw(_vm.strings.G)))]), _c('span', {
     staticClass: "tab-line"
-  }, [_vm._v(_vm._s(_vm.draw(_vm.strings.D)))]), _vm._v(" "), _c('span', {
+  }, [_vm._v(_vm._s(_vm.draw(_vm.strings.D)))]), _c('span', {
     staticClass: "tab-line"
-  }, [_vm._v(_vm._s(_vm.draw(_vm.strings.A)))]), _vm._v(" "), _c('span', {
+  }, [_vm._v(_vm._s(_vm.draw(_vm.strings.A)))]), _c('span', {
     staticClass: "tab-line"
   }, [_vm._v(_vm._s(_vm.draw(_vm.strings.E)))])], 2)
 },staticRenderFns: []}
@@ -15713,7 +15713,7 @@ var Component = __webpack_require__("./node_modules/vue-loader/lib/component-nor
   /* script */
   __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/tab-bar.vue"),
   /* template */
-  __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-69d06f40\",\"hasScoped\":true}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/tab-bar.vue"),
+  __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-69d06f40\",\"hasScoped\":true}!./node_modules/vue-loader/lib/template-compiler/preprocessor.js?engine=pug!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/tab-bar.vue"),
   /* styles */
   injectStyle,
   /* scopeId */
