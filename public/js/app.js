@@ -1634,17 +1634,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -4689,7 +4678,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-1115a3a6\",\"hasScoped\":true}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/footer.vue":
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-1115a3a6\",\"hasScoped\":true}!./node_modules/vue-loader/lib/template-compiler/preprocessor.js?engine=pug!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/footer.vue":
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -4704,7 +4693,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "container"
   }, [_c('div', {
     staticClass: "content has-text-centered"
-  }, [_c('p', [_c('strong', [_vm._v("Random Chord Progression Generator")]), _vm._v(" "), _c('a', {
+  }, [_c('p', [_c('strong', [_vm._v("Random Chord Progression Generator")]), _c('a', {
     attrs: {
       "href": "https://github.com/james-harper/random-chord-progressions/",
       "target": "_blank"
@@ -4713,11 +4702,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "icon"
   }, [_c('i', {
     staticClass: "fa fa-github"
-  })])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('a', {
+  })])]), _c('br'), _c('a', {
     attrs: {
       "href": "mailto:james.is@coolasf.uk"
     }
-  }, [_vm._v("\r\n                    james.is@coolasf.uk\r\n                ")])])])])
+  }, [_vm._v("james.is@coolasf.uk")])])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
@@ -15595,7 +15584,7 @@ var Component = __webpack_require__("./node_modules/vue-loader/lib/component-nor
   /* script */
   __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/footer.vue"),
   /* template */
-  __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-1115a3a6\",\"hasScoped\":true}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/footer.vue"),
+  __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-1115a3a6\",\"hasScoped\":true}!./node_modules/vue-loader/lib/template-compiler/preprocessor.js?engine=pug!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/footer.vue"),
   /* styles */
   injectStyle,
   /* scopeId */
