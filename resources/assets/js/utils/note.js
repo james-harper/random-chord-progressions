@@ -1,6 +1,6 @@
 import _toUpper from 'lodash/toUpper';
 import _isNumber from 'lodash/isNumber';
-import Helpers from './../helpers';
+import Helpers from '@/helpers';
 
 const Note = {};
 

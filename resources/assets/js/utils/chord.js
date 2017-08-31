@@ -1,9 +1,9 @@
 import _capitalize from 'lodash/capitalize';
 import _each from 'lodash/foreach';
 import _sample from 'lodash/sample';
-import {supportedChords} from './../constants';
-import Note from './note';
-import chordMap from './../chord-map';
+import {supportedChords} from '@/constants';
+import Note from '@/utils/note';
+import chordMap from '@/chord-map';
 
 const Chord = {};
 
