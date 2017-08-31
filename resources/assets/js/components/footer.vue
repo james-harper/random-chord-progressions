@@ -25,34 +25,34 @@
 import devtools from 'devtools-detect';
 
 export default {
-    data() {
-      return {
-        isMobile: /iPhone|iPad|iPod|Android/i.test(navigator.userAgent),
-        devtools
-      }
-    },
-    computed: {
-      hideFooter() {
-        return (
-          this.isMobile ||
-          (this.devtools.open && this.devtools.orientation === 'horizontal')
-        );
-      }
-    },
-    props: ['fixed']
+  data() {
+    return {
+      isMobile: /iPhone|iPad|iPod|Android/i.test(navigator.userAgent),
+      devtools
+    }
+  },
+  computed: {
+    hideFooter() {
+      return (
+        this.isMobile ||
+        (this.devtools.open && this.devtools.orientation === 'horizontal')
+      );
+    }
+  },
+  props: ['fixed']
 }
 </script>
 
 <style scoped>
 .footer {
-    max-height:  10px;
-    padding: 30px 5px 60px;
-    border-top: 1px solid #d3d6db;
-    bottom:0;
-    width:100%;
+  max-height:  10px;
+  padding: 30px 5px 60px;
+  border-top: 1px solid #d3d6db;
+  bottom:0;
+  width:100%;
 }
 
 .fixed {
-    position: fixed;
+  position: fixed;
 }
 </style>
