@@ -54,11 +54,11 @@ Bar.draw = (chords, string, pattern, index) => {
       note = '-'
     }
 
-    let dontOutput = (
+    let shouldOutput = !(
       (note >= 10 && pattern[i-1] !== '-') && (pattern[i-1] !== undefined)
     );
 
-    if (!dontOutput) {
+    if (shouldOutput) {
       output += (pattern[i] !== '-') ? note : '-';
     }
   }
