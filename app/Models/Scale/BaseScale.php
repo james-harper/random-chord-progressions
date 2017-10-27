@@ -116,5 +116,4 @@ abstract class BaseScale
      * @return string
      */
     abstract protected function getIntervals() : string;
-
 }
